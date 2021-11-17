@@ -7,8 +7,13 @@ This project expands on a pre-existing idea of automatically tracked parking spo
 
 The goal for the project is to be "endlessly" expandable while utilizing cheap and long-lasting sensors.
 
-## Requirements for Each Cluster:
+## Requirements for Each Node (Wired):
 - Up to 16 Contactless Magnetic Hall sensors
+- 1 UART/SPI/I2C Multiplexer
+- 1 Arduino
+
+## Requirements for Each Node (Wireless):
+- 1 Contactless Magnetic Hall sensors
 - 1 Wireless Transceiver module
 - 1 Arduino
 
@@ -16,6 +21,6 @@ The goal for the project is to be "endlessly" expandable while utilizing cheap a
 - 1 RFID reader
 - 1 Arduino
 - 1 Raspberry Pi
-- N Clusters 
+- N Nodes
 
 ## Architecture:

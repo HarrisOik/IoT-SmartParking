@@ -11,11 +11,13 @@ The goal for the project is to be "endlessly" expandable while utilizing cheap a
 - Up to 16 Contactless Magnetic Hall sensors
 - 1 UART/SPI/I2C Multiplexer
 - 1 Arduino
+Approximate Node Price ≈ 7€ 
 
 ## Requirements for Each Node (Wireless):
 - 1 Contactless Magnetic Hall sensors
 - 1 Wireless Transceiver module
 - 1 Arduino
+Approximate Node Price ≈ 5-10€
 
 ## Requirements for the System:
 - 1 RFID reader

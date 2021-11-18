@@ -7,22 +7,34 @@ This project expands on a pre-existing idea of automatically tracked parking spo
 
 The goal for the project is to be "endlessly" expandable while utilizing cheap and long-lasting sensors.
 
-## Requirements for Each Node (Wired):
-- Up to 16 Contactless Magnetic Hall sensors
-- 1 UART/SPI/I2C Multiplexer
-- 1 Arduino
-Approximate Node Price ≈ 7€ 
+## Hardware Requirements:
 
-## Requirements for Each Node (Wireless):
-- 1 Contactless Magnetic Hall sensors
-- 1 Wireless Transceiver module
-- 1 Arduino
-Approximate Node Price ≈ 5-10€
+### Requirements for Parking Node (Wireless):
+- 1 Contactless Magnetic Hall sensor
+- 1 ESP8266 Wi-Fi MCU
 
-## Requirements for the System:
-- 1 RFID reader
+<b>Approximate Node Price ≈ 5-7€</b>
+
+### Requirements for Gate System (Wireless):
+- 1 RFID Reader
+- 1 ESP8266 Wi-Fi MCU
 - 1 Arduino
+
+<b>Approximate Node Price ≈ 20-25€</b>
+
+### Requirements for the System:
 - 1 Raspberry Pi
-- N Nodes
+- N Parking Nodes
+- M Gate Nodes
 
 ## Architecture:
+![architecture](https://user-images.githubusercontent.com/79098484/142476323-f2e8cfba-8232-4d0d-bc62-4f20e6f07c17.png)
+### Endeictive Use-Case:
+1. User registers RFID card/tag on the system via the web application
+2. User can check the web application for all available parking spots in the system
+3. User arrives at a gate node with a vehicle and scans the card/tag on the RFID reader[^1]
+4. After the system verifies that the card/tag is valid/registered, it allows the user to enter the parking space[^1]
+5. User parks the vehicle on any available parking spot in the system
+6. System detects the vehicle and automatically updates the web application 
+
+[^1]: The system does NOT NEED to have a GATE SYSTEM. It can also operate simply as a tracker for available parking spots.

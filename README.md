@@ -18,9 +18,8 @@ The goal for the project is to be "endlessly" expandable while utilizing cheap a
 ### Requirements for Gate System (Wireless):
 - 1 RFID Reader
 - 1 ESP8266 Wi-Fi MCU
-- 1 Arduino
 
-<b>Approximate Node Price ≈ 20-25€</b>
+<b>Approximate Node Price ≈ 10-12</b>
 
 ### Requirements for the System:
 - 1 Raspberry Pi
@@ -28,7 +27,7 @@ The goal for the project is to be "endlessly" expandable while utilizing cheap a
 - M Gate Nodes
 
 ## Architecture:
-![architecture](https://user-images.githubusercontent.com/79098484/142476323-f2e8cfba-8232-4d0d-bc62-4f20e6f07c17.png)
+![architecture](https://user-images.githubusercontent.com/79098484/142884899-d7bde8e8-cf9e-4332-8891-2aa61237e9db.jpg)
 ### Endeictive Use-Case:
 1. User registers RFID card/tag on the system via the web application
 2. User can check the web application for all available parking spots in the system

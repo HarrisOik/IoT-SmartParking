@@ -1,5 +1,4 @@
 # IoT-SmartParking
-
 ## About:
 This is a group project developed for the Internet of Things (IoT) course of University of West Attica (UniWA).
 
@@ -10,21 +9,21 @@ The goal for the project is to be "endlessly" expandable while utilizing cheap a
 ## Hardware Requirements:
 
 ### Requirements for Parking Node (Wireless):
-- 1 Contactless Magnetic Hall sensor
+- 1 HY-SRF05 Ultrasonic Distance Sensor
 - 1 ESP8266 Wi-Fi MCU
 
-<b>Approximate Node Price ≈ 5-7€</b>
+<b>Approximate Node Price ≈ 6-8€</b>
 
 ### Requirements for Gate System (Wireless):
 - 1 RFID Reader
 - 1 ESP8266 Wi-Fi MCU
 
-<b>Approximate Node Price ≈ 10-12</b>
+<b>Approximate Node Price ≈ 10-12€</b>
 
-### Requirements for the System:
+### Requirements for Middleware:
 - 1 Raspberry Pi
-- N Parking Nodes
-- M Gate Nodes
+
+<b>Approximate Price ≈ 20-25€</b>
 
 ## Architecture:
 ![architecture](https://user-images.githubusercontent.com/79098484/142884899-d7bde8e8-cf9e-4332-8891-2aa61237e9db.jpg)

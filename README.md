@@ -45,7 +45,7 @@ DIAGRAM PLACEHOLDER
 
 > **NOTE:** Each mesh network consists of up to 10 slave nodes and 1 master node (up to 11 nodes per network)
 
-### Endeictive Use-Case:
+### Indicative Use-Case:
 1. User registers RFID card/tag on the system via the web application[^1]
 2. User can check the web application for all available parking spots in the system
 3. User arrives at a gate system[^1] with a vehicle and scans the card/tag on the RFID reader

@@ -1,4 +1,7 @@
 # IoT-SmartParking
+
+---
+
 ## About:
 This is a group project developed for the Internet of Things (IoT) course of University of West Attica (UniWA).
 
@@ -26,6 +29,8 @@ The goal for the project is to be "endlessly" expandable while utilizing cheap a
 - 1 Raspberry Pi
 
 <b>Approximate Price ≈ 20-25€</b>
+
+> **NOTICE:** There are many different types of sensors that you can use for this purpose. We choose the most affordable/efficient ones.
 
 ---
 

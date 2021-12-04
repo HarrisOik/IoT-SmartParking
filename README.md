@@ -43,8 +43,8 @@ The goal for the project is to be "endlessly" expandable while utilizing cheap a
 - When a vehicle is detected or a parking spot is freed, the sensors will send the data to the middleware which will forward the data to the cloud
 - The web application will automatically update the availability
 ### Sensor Node Architecture:
-DIAGRAM PLACEHOLDER
-- The nodes work in a mesh network
+![sensor_arch](https://user-images.githubusercontent.com/79098484/144721616-5773bd7a-ec44-4ab3-9300-381fb52c2b69.jpg)
+- The nodes work in a star network configuration
 - Each slave node forwards their change to the network's master node
 - Upon reaching the master node, the data is forwarded to the middleware
 

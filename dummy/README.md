@@ -15,10 +15,11 @@ This is an example that creates 3 dummy sensors and sends dummy data to a web ap
 
 ## How to Run:
 1. After you install Swarmlab Hybrid and downloaded the PoC Data-Collector Microservice, start the system. 
-(More here: <code>https://git.swarmlab.io:3000/docs/Documentation</code>)
 2. Open the web application available through the microservice.
 3. Find the project's base directory of the dummy service. (available after you start PoC Data-Collector)
 4. Run the script.
+
+> **NOTE:** More documentation about Swarmlab Hybrid and the PoC Data Collector Microservice can be found here <code>https://git.swarmlab.io:3000/docs/Documentation</code>
 
 ### Usage:
 ```sh

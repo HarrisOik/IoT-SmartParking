@@ -16,8 +16,9 @@ The goal for the project is to be "endlessly" expandable while utilizing cheap a
 ### Requirements for Sensor Node:
 - 1 HY-SRF05 Ultrasonic Distance Sensor
 - 1 ESP8266 Wi-Fi MCU
+- 1 Arduino
 
-<b>Approximate Node Price ≈ 6-8€</b>
+<b>Approximate Node Price ≈ 10-14€</b>
 
 ### Requirements for Gate System[^1]:
 - 1 RFID Reader
@@ -43,12 +44,11 @@ The goal for the project is to be "endlessly" expandable while utilizing cheap a
 - When a vehicle is detected or a parking spot is freed, the sensors will send the data to the middleware which will forward the data to the cloud
 - The web application will automatically update the availability
 ### Sensor Node Architecture:
-![sensor_arch](https://user-images.githubusercontent.com/79098484/144721616-5773bd7a-ec44-4ab3-9300-381fb52c2b69.jpg)
-- The nodes work in a star network configuration
-- Each slave node forwards their change to the network's master node
-- Upon reaching the master node, the data is forwarded to the middleware
+- The nodes work independently
+- Each node sends its own data to the middleware
+- Upon reaching the middleware, it forwards them to the HTTP server
 
-> **NOTE:** Each mesh network consists of up to 10 slave nodes and 1 master node (up to 11 nodes per network)
+> **NOTE:** In this project we are forwarding the data directly to the HTTP server
 
 ### Indicative Use-Case:
 1. User registers RFID card/tag on the system via the web application[^1]
@@ -59,4 +59,4 @@ The goal for the project is to be "endlessly" expandable while utilizing cheap a
 6. System detects the vehicle and automatically updates the web application 
 
 [^1]: The system does NOT NEED to have a GATE SYSTEM. It can also operate simply as a tracker for available parking spots.
-[^2]: The middleware is not necessary as long as the sensors have IP protocol accessibility.
+[^2]: The middleware is not necessary as long as the sensors have IP protocol accessibility, thus we did not use it.

@@ -7,10 +7,10 @@ This document contains in full detail the functionality and operation of the HTT
 - [Dependencies](#dependencies)
 - [How to Set Up The dotenv File](#setting-up-the-dotenv-file)
 - [MongoDB Schemas](#mongodb-schemas)
-- [Parking Spot HTTP Routes](#parking-spot-http-routes)
-- [Parking Ticket (RFID) HTTP Routes](#parking-ticket-http-routes)
-- [Parking Spot HTTP Controllers](#parking-spot-http-controllers)
-- [Parking Ticket (RFID) HTTP Controllers](#parking-ticket-http-controllers)
+- [Parking Spot API](#parking-spot-api)
+- [Parking Ticket (RFID) API](#parking-ticket-api)
+- [Parking Spot API Controllers](#parking-spot-api-controllers)
+- [Parking Ticket (RFID) API Controllers](#parking-ticket-api-controllers)
 - [Status Codes](#status-codes)
 
 ---
@@ -61,7 +61,7 @@ The schemas prevent any useless attributes to be added to the database by ignori
 
 ---
 
-## Parking Spot HTTP Routes
+## Parking Spot API
 The following table contains all the different routes that are related with the parking spots along with their results when they are executed. The {{URL}} variable is ```network_ip:3000```
 
 | Route                          | Method      | Description                                                                       |
@@ -73,7 +73,7 @@ The following table contains all the different routes that are related with the 
 
 ---
 
-## Parking Ticket HTTP Routes
+## Parking Ticket API
 The following table contains all the different routes that are related with the parking tickets along with their results when they are executed. The {{URL}} variable is ```network_ip:3000```
 
 | Route                            | Method      | Description                                                                         |
@@ -83,7 +83,7 @@ The following table contains all the different routes that are related with the 
 
 ---
 
-## Parking Spot HTTP Controllers
+## Parking Spot API Controllers
 Now we will see the format the **requests** and **responses** for the parking spots for the proper operation of the HTTP server.
 - spots/ GET request
 ```
@@ -141,7 +141,7 @@ BODY:
 
 ---
 
-## Parking Ticket HTTP Controllers
+## Parking Ticket API Controllers
 Now we will see the format the **requests** and **responses** for the parking tickets for the proper operation of the HTTP server.
 - tickets/ POST request
 ```

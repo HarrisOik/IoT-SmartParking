@@ -15,6 +15,8 @@ Navigate to path that this folder is located. There run the following commands i
 
 ```npm start```
 
+```npm run dev``` to run with nodemon.
+
 ---
 
 > **IMPORTANT:** Make sure to read the full documentation about the HTTP server here: 

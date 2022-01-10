@@ -18,17 +18,19 @@ This document contains in full detail the functionality and operation of the HTT
 ## Dependencies
 ### General Dependencies
 The application requires the following dependencies to be installed in order to work. Those dependencies are:
-- express
-- mongoose
+- express.js
+- mongoose.js
 - dotenv
+
 Express.js is used in order to utilise features like the express.Router. Also a very important tool is the JSON middleware (express.json) that express has.
 
 >**NOTICE:** You must use Express v4.16.0 and onwards for this application to work as express.json does not exist in older versions.
 
 Mongoose.js is used for the creation of schemas for our different objects (parking spots and tickets) as well as the connection and handling of MongoDB.
+
 dotenv is used for setting up an environment variable. We will use this to add our connection URL to a file ignored by git.
 
->**IMPORTANT:** You must set up the .env file in order for the application to connect to the database. Without DB connection the application does not run. More on this later on.
+>**IMPORTANT:** You must set up the .env file in order for the application to connect to the database[^1]. Without DB connection the application does not run. 
 
 ### Development Dependencies
 The only development dependency that was used is nodemon.js. This is not necessary as it is only used for automatically restarting the server when the files are changed.
@@ -37,10 +39,10 @@ If you wish to run the server in development mode use ```npm dev```
 ---
 
 ### Setting Up The dotenv File
-The first and most important step for running this application after installing all the dependencies is to set up the dotenv file. The following steps explain the process:
+The first and most important step for running this application after installing all the dependencies is to set up the dotenv file[^1]. The following steps explain the process:
 1. Navigate inside the HTTP Server folder.
-2. Create a file name ```.env```
-3. Inside the file add the following variable -> ```MONGO_URI={your_atlas_connection_url}```
+2. Create a file named ```.env```
+3. Inside the file add the following variable -> ```MONGO_URI={your_mongo_connection_url}```
 4. Save the file and run the server (assuming the dotenv dependency is installed the server should run and connect automatically to your database)
 
 >**NOTE:** For this project we used MongoDB Atlas Database. It provides an application connection URL.
@@ -68,8 +70,8 @@ The following table contains all the different routes that are related with the 
 | ------------------------------ | ----------- | --------------------------------------------------------------------------------- |
 | {{URL}}/api/v1/spots/          | GET         | Returns all parking spot entries from the database                                |
 | {{URL}}/api/v1/spots/          | POST        | Creates a new parking spot                                                        |
-| {{URL}}/api/v1/spots/:name     | PATCH       | Updates an existing parking spot matching the name given in the url (:name)       |
-| {{URL}}/api/v1/spots/:name     | DELETE      | Deletes an existing parking spot matching the name given in the url (:name)       |
+| {{URL}}/api/v1/spots/:name     | PATCH       | Updates an existing parking spot matching the name given in the URL (:name)       |
+| {{URL}}/api/v1/spots/:name     | DELETE      | Deletes an existing parking spot matching the name given in the URL (:name)       |
 
 ---
 
@@ -79,7 +81,7 @@ The following table contains all the different routes that are related with the 
 | Route                            | Method      | Description                                                                         |
 | -------------------------------- | ----------- | ----------------------------------------------------------------------------------- |
 | {{URL}}/api/v1/tickets/          | POST        | Creates a new parking ticket                                                        |
-| {{URL}}/api/v1/tickets/:ticket   | GET         | Returns an existing parking ticket matching the ticket given in the url (:ticket)   |
+| {{URL}}/api/v1/tickets/:ticket   | GET         | Returns an existing parking ticket matching the ticket given in the URL (:ticket)   |
 
 ---
 
@@ -233,3 +235,5 @@ The following table shows the different status codes that a user can receive for
 | {{URL}}/api/v1/spots/:name       | DELETE      | 200        | 404        | 500      |
 | {{URL}}/api/v1/tickets/          | POST        | 201        | null       | 500      |
 | {{URL}}/api/v1/tickets/:ticket   | GET         | 200        | 404        | 500      |
+
+[^1]: You can hard-code the URL inside of the app.js replacing the MONGO_URI variable, although it is not recommended.

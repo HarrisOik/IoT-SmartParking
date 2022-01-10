@@ -95,7 +95,25 @@ null
 - spots/ GET response
 ```
 BODY:
-
+{
+    "spots": [
+        {
+            "_id": "61d5d2d192c2b7203e299bed",
+            "name": "A1",
+            "status": false,
+            "__v": 0
+        },
+        {
+            "_id": "61d5d3d092c2b7203e299bef",
+            "name": "A2",
+            "status": true,
+            "__v": 0
+        },
+       .
+       .
+       .
+    ]
+}
 ```
 - spots/ POST request
 ```
@@ -103,40 +121,61 @@ URL:
 spots/
 BODY:
 {
-    "name":"A1",
-    "status":false
+    "name":"B3",
+    "status":true
 }
 ```
 - spots/ POST response
 ```
 BODY:
-
+{
+    "spot": {
+        "name": "B3",
+        "status": true,
+        "_id": "61dc3c603d90a5cb036125dc",
+        "__v": 0
+    }
+}
 ```
 - spots/:name PATCH request
 ```
 URL:
-spots/{parking_spot_name}
+spots/B3
 BODY:
 {
-    "status":true
+    "status":false
 }
 ```
 - spots/:name PATCH response
 ```
 BODY:
-
+{
+    "spot": {
+        "_id": "61dc3c603d90a5cb036125dc",
+        "name": "B3",
+        "status": false,
+        "__v": 0
+    }
+}
 ```
 - spots/:name DELETE request
 ```
 URL:
-spots/{parking_spot_name}
+spots/B3
 BODY:
 null
 ```
 - spots/:name DELETE response
 ```
 BODY:
-
+{
+    "spot": {
+        "_id": "61dc3c603d90a5cb036125dc",
+        "name": "B3",
+        "status": false,
+        "__v": 0
+    }
+}
 ```
 
 ---
@@ -149,25 +188,37 @@ URL:
 tickets/
 BODY:
 {
-    "ticket": "12345abcd6789"
+    "ticket": "12345abcd67890"
 }
 ```
 - tickets/ POST response
 ```
 BODY:
-
+{
+    "ticket": {
+        "ticket": "12345abcd67890",
+        "_id": "61dc3d323d90a5cb036125e0",
+        "__v": 0
+    }
+}
 ```
 - tickets/:ticket GET request
 ```
 URL:
-tickets/12345abcd6789
+tickets/12345abcd67890
 BODY:
 null
 ```
 - tickets/:ticket GET response
 ```
 BODY:
-
+{
+    "ticket": {
+        "_id": "61dc3d323d90a5cb036125e0",
+        "ticket": "12345abcd67890",
+        "__v": 0
+    }
+}
 ```
 
 ---

@@ -34,7 +34,7 @@ dotenv is used for setting up an environment variable. We will use this to add o
 
 ### Development Dependencies
 The only development dependency that was used is nodemon.js. This is not necessary as it is only used for automatically restarting the server when the files are changed.
-If you wish to run the server in development mode use ```npm dev```
+If you wish to run the server in development mode use ```npm run dev```
 
 ---
 

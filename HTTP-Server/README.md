@@ -15,7 +15,7 @@ Navigate to path that this folder is located. There run the following commands i
 
 ```npm start```
 
-```npm run dev``` to run with nodemon.
+> **NOTE:** Use ```npm run dev``` to run with nodemon.
 
 ---
 

@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors')
 const app = express();
 const spots = require('./routes/spots')
 const tickets = require('./routes/tickets')
@@ -6,6 +7,8 @@ const connectDB = require('./db/connect')
 require('dotenv').config()
 
 // middleware
+// app.use(express.static('./public')) for serving front end
+app.use(cors())                 // middleware for allowing foreign URLs
 app.use(express.json());        // middleware for json handling
 
 // routes

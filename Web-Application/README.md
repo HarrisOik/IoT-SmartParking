@@ -1,4 +1,4 @@
-# iot
+# Quick Start Manual
 
 ## Project setup
 ```

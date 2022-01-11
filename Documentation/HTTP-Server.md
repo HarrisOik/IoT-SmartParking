@@ -21,6 +21,7 @@ The application requires the following dependencies to be installed in order to 
 - express.js
 - mongoose.js
 - dotenv
+- cors
 
 Express.js is used in order to utilise features like the express.Router. Also a very important tool is the JSON middleware (express.json) that express has.
 
@@ -31,6 +32,10 @@ Mongoose.js is used for the creation of schemas for our different objects (parki
 dotenv is used for setting up an environment variable. We will use this to add our connection URL to a file ignored by git.
 
 >**IMPORTANT:** You must set up the .env file in order for the application to connect to the database[^1]. Without DB connection the application does not run. 
+
+cors is used to allow the server to be used by non-local origins.
+
+>**NOTICE:** We used this middleware to allow our front-end to access the API due to some issues encountered by Vue. If you intend to use this server for a specific website only i.e. a specific front-end, you can remove this middleware altogether and use express.static('{front-end_path}').
 
 ### Development Dependencies
 The only development dependency that was used is nodemon.js. This is not necessary as it is only used for automatically restarting the server when the files are changed.

@@ -35,7 +35,7 @@ dotenv is used for setting up an environment variable. We will use this to add o
 
 cors is used to allow the server to be used by non-local origins.
 
->**NOTICE:** We used this middleware to allow our front-end to access the API due to some issues encountered by Vue. If you intend to use this server for a specific website only i.e. a specific front-end, you can remove this middleware altogether and use express.static('{front-end_path}').
+>**NOTICE:** We used this middleware to allow our front-end to access the API due to some issues encountered by Vue. If you intend to use this server for a specific website only i.e. a specific front-end, you can remove this middleware altogether and use `express.static('{front-end_path}')`.
 
 ### Development Dependencies
 The only development dependency that was used is nodemon.js. This is not necessary as it is only used for automatically restarting the server when the files are changed.

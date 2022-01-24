@@ -18,7 +18,7 @@ const char* ssid = "your_id";
 const char* password = "your_pass";
 
 
- char Url[60] ="http://192.168.1.13:3000/api/v1/tickets/";
+ char Url[60] ="http://{SERVER_ADDRESS}:3000/api/v1/tickets/";
  
 WiFiClient client;
 // Init array that will store new NUID

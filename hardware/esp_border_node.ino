@@ -49,7 +49,7 @@ void initSensor()
     #endif
     
     
-    http.begin(client,"http://192.168.1.13:3000/api/v1/spots");      //Specify request destination
+    http.begin(client,"http://{SERVER_ADDRESS}:3000/api/v1/spots");      //Specify request destination
     http.addHeader("Content-Type", "application/json");  //Specify content-type header
  
     int httpCode = http.POST(JsonMessage);   //Send the request
@@ -86,7 +86,7 @@ void sendToServer(String status)
     serializeJson(object,JsonMessage);
     Serial.println();
     
-    http.begin(client,"http://192.168.1.13:3000/api/v1/spots/A4");      //Specify request destination
+    http.begin(client,"http://{SERVER_ADDRESS}:3000/api/v1/spots/A4");      //Specify request destination
     http.addHeader("Content-Type", "application/json");  //Specify content-type header
  
     int httpCode = http.PATCH(JsonMessage);   //Send the request

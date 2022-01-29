@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-
+// RFID Module Config
 #define SS_PIN D8
 #define RST_PIN D0
 MFRC522 rfid(SS_PIN, RST_PIN); // Instance of the class
@@ -18,7 +18,7 @@ const char* ssid = "your_id";
 const char* password = "your_pass";
 
 
- char Url[60] ="http://{SERVER_ADDRESS}:3000/api/v1/tickets/";
+char Url[60] ="http://{SERVER_ADDRESS}:3000/api/v1/tickets/";
  
 WiFiClient client;
 // Init array that will store new NUID
@@ -42,8 +42,7 @@ void sendToServer(char byteArray[5])
 
     if(httpCode == 200)
     {
-      Serial.println("Correct card");
-      
+      Serial.println("Correct card");  
     }
     else
     {
@@ -61,7 +60,7 @@ void sendToServer(char byteArray[5])
 
 
 void setup() {
- Serial.begin(115200);
+ Serial.begin(115200); // Serial bit-rate
  SPI.begin(); // Init SPI bus
  rfid.PCD_Init(); // Init MFRC522
  Serial.println();
@@ -72,11 +71,8 @@ void setup() {
  }
  Serial.println();
  Serial.println(F("This code scan the MIFARE Classic NUID."));
- Serial.print(F("Using the following key:"));
- printHex(key.keyByte, MFRC522::MF_KEY_SIZE);
 
-
-   WiFi.begin(ssid, password);
+  WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) 
   {
     delay(500);
@@ -128,14 +124,6 @@ sendToServer(stringArray);
      nuidPICC[i] = rfid.uid.uidByte[i];
    }
    
-   Serial.println(F("The NUID tag is:"));
-   Serial.print(F("In hex: "));
-   printHex(rfid.uid.uidByte, rfid.uid.size);
-   Serial.println();
-   
-   Serial.print(F("In dec: "));
-   printDec(rfid.uid.uidByte, rfid.uid.size);
-   Serial.println();
  }
  else Serial.println(F("Card read previously."));
  // Halt PICC
@@ -143,21 +131,4 @@ sendToServer(stringArray);
  // Stop encryption on PCD
  rfid.PCD_StopCrypto1();
 }
-/**
-   Helper routine to dump a byte array as hex values to Serial.
-*/
-void printHex(byte *buffer, byte bufferSize) {
- for (byte i = 0; i < bufferSize; i++) {
-   Serial.print(buffer[i] < 0x10 ? " 0" : " ");
-   Serial.print(buffer[i], HEX);
- }
-}
-/**
-   Helper routine to dump a byte array as dec values to Serial.
-*/
-void printDec(byte *buffer, byte bufferSize) {
- for (byte i = 0; i < bufferSize; i++) {
-   Serial.print(buffer[i] < 0x10 ? " 0" : " ");
-   Serial.print(buffer[i], DEC);
- }
 }
